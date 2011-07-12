@@ -13,6 +13,7 @@ var options = trollop.options(process.ARGV.slice(0),function() {
   this.opt('test', 'Which test to run.', {dflt: 'gets', type: 'string'});
   this.opt('iterations', 'Iterations', {dflt: 100, type: 'int'});
   this.opt('ksize', 'Key size in bytes', {dflt: 100, type: 'int'});
+  this.opt('vsize', 'Value size in bytes', {dflt: 100, type: 'int'});
   this.opt('processes', 'Number of processes', {dflit: 1, type: 'int'});
   this.opt('dir', 'Directory', {dflit: '/tmp', type: 'string'});
 
