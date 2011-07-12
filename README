@@ -3,3 +3,6 @@ node-sstat
 Just a silly project to help manage long-running tests against storage
 systems.
 
+Do something like this:
+
+$ node bin/sstat-mgr --iterations 100000 --ksize 10 --dir '/tmp' --processes 2
