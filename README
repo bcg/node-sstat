@@ -1,0 +1,5 @@
+node-sstat
+
+Just a silly project to help manage long-running tests against storage
+systems.
+

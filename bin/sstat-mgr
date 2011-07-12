@@ -1,0 +1,23 @@
+require.paths.push(__dirname + '/../lib');
+
+var trollop = require('trollop'),
+    ss      = require('sstat'),
+    sys     = require('sys');
+
+var options = trollop.options(process.ARGV.slice(0),function() {
+  this.opt('verbose', '', {dflt: false, type: 'boolean'});
+  this.opt('ip', 'IP Address',{dflt: '127.0.0.1', type: 'string'});
+  this.opt('port', 'Port', {dflt: 11211, type: 'int'});
+  this.opt('store', 'Which store to test.', {dflt: 'memcache', type: 'string'});
+  this.opt('seed', 'Seed tests?', {dflt: true});
+  this.opt('test', 'Which test to run.', {dflt: 'gets', type: 'string'});
+  this.opt('iterations', 'Iterations', {dflt: 100, type: 'int'});
+  this.opt('ksize', 'Key size in bytes', {dflt: 100, type: 'int'});
+  this.opt('processes', 'Number of processes', {dflit: 1, type: 'int'});
+  this.opt('dir', 'Directory', {dflit: '/tmp', type: 'string'});
+
+});
+
+ss.mgrstart(options, function() {
+  sys.exit();
+});

@@ -1,0 +1,16 @@
+{
+    "name":        "node-sstat",
+    "description": "Storage statistics test runner.",
+    "version":     "0.0.1",
+    "maintainers": [
+        {
+            "name": "Brenden Grace",
+            "email": "brenden.grace@gmail.com"
+        }
+    ],
+    "dependencies": {
+        "trollop": "*",
+        "memcached": "*",
+        "microtime": "*"
+    }
+}
